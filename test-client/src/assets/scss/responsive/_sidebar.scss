@@ -1,0 +1,25 @@
+@media (max-width: $screen-sm-max) {
+
+	nav {
+		transform: translateX(-100%);
+		transition: $trsn-dur-lg;
+		padding-bottom: 10px;
+
+		&.opened {
+			transform: translateX(0);
+		}
+
+		.logo {
+			height: 60px;
+			display: flex;
+			justify-content: space-between;
+			padding: 0 20px;
+		}
+
+		.close-sidebar-btn {
+			display: inline-block;
+			color: $color-white-60;
+		}
+	}
+
+}

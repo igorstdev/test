@@ -1,0 +1,41 @@
+/* Pagination styles */
+
+.pagination {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 50px 0;
+
+	li {
+
+		a {
+			display: inline-block;
+			width: 35px;
+			min-width: 35px;
+			height: 35px;
+			text-align: center;
+			background-color: #FFFFFF;
+			color: $color-primary;
+			border-radius: $br-rounded;
+			margin: 0 10px;
+			font-size: $fs-sm;
+			line-height: 35px;
+
+			i {
+				font-size: $fs-lg;
+				line-height: 35px;
+			}
+
+			&.active {
+				background-color: $color-primary;
+				color: #FFFFFF;
+			}
+
+			&.disabled {
+				pointer-events: none;
+				background-color: #e6e6e8;
+				color: $color-black-30;
+			}
+		}
+	}
+}

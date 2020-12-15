@@ -1,0 +1,59 @@
+/*  Sidebar styles */
+
+nav {
+	width: 260px;
+	height: 100%;
+	min-height: 100vh;
+	@include position($position: fixed);
+	z-index: 4;
+	overflow-y: auto;
+
+	.close-sidebar-btn {
+		display: none;
+	}
+
+	.nav-items {
+
+		li {
+			
+			a {
+				padding-left: 60px;
+				padding-right: 15px;
+				border-left: 3px solid transparent;
+				width: 100%;
+				display: block;
+				height: 55px;
+				line-height: 55px;
+				@include ellipsis();
+
+				i {
+					@include position($left:20px);
+					@include YAlign();
+					font-size: 24px;
+				}
+			}
+		}
+	}
+
+	&.dark {
+		background-color: $color-tertiary;
+		color: #FFFFFF;
+
+		.nav-items {
+
+			a {
+				color: $color-white-60;
+
+				&.active, &:hover {
+					background-color: $color-black;
+					color: #FFFFFF;
+					opacity: 1;
+				}
+
+				&.active {
+					border-color: #FFFFFF;
+				}
+			}
+		}
+	}
+}

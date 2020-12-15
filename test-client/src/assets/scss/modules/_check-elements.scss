@@ -1,0 +1,137 @@
+/* Check elements */
+
+// Checkbox styles
+
+.checkbox {
+	cursor: pointer;
+	display: inline-flex;
+
+	.check-icon {
+		top: 3px;
+		width: 22px;
+		min-width: 22px;
+		height: 22px;
+		border-radius: $br-lg;
+		position: relative;
+		background-color: transparent;
+		border: 2px solid $color-primary;
+
+		&::before {
+			content: ($icon-check);
+			font-family: $icomoon-font-family;
+			color: $color-primary;
+			position: absolute;
+			font-size: 11px;
+			display: block;
+			top: 4px;
+			left: 2px;
+			opacity: 0;
+			transition: $trsn-dur-lg;
+		}
+	}
+
+	.checkbox-label {
+		padding-left: 10px;
+		color: $color-secondary;
+		transition: $trsn-dur;
+		line-height: 30px;
+	}
+
+	input {
+		display: none;
+
+		&:checked {
+			& ~ .check-icon {
+				opacity: 1;
+
+				&::before {
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	&.disabled {
+		pointer-events: none;
+
+		.check-icon {
+			border-color: $color-disable;
+		}
+	}
+
+	&:hover {
+		opacity: 0.8;
+	}
+}
+
+// Radio button styles
+
+.radio-button {
+	position: relative;
+	transition: $trsn-dur-lg;
+	display: flex;
+	align-items: center;
+
+	&:hover {
+		opacity: 0.7;
+	}
+
+	.check-icon {
+		display: inline-block;
+		width: 22px;
+		height: 22px;
+		min-width: 22px;
+		border: 2px solid $color-primary;
+		border-radius: $br-rounded;
+		background: transparent;
+		cursor: pointer;
+
+		&::after {
+			content: '';
+			width: 10px;
+			height: 10px;
+			background: $color-primary;
+			position: absolute;
+			top: 10px;
+			left: 6px;
+			border-radius: $br-rounded;
+			border-color: $color-primary;
+			display: none;
+		}
+	}
+
+	.radio-label {
+		color: $color-secondary;
+		transition: $trsn-dur;
+		cursor: pointer;
+		padding-left: 10px;
+		line-height: 30px;
+	}
+
+	input {
+		display: none;
+
+		&:checked {
+
+			& ~ .check-icon {
+				border-color: $color-primary;
+
+				&:after {
+					display: block;
+				}
+			}
+		}
+	}
+
+	&.disabled {
+		pointer-events: none;
+
+		.check-icon {
+			border-color: $color-disable;
+		}
+	}
+}
+
+.checkbox, .radio-button {
+	margin-bottom: 10px;
+}

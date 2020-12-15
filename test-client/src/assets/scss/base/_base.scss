@@ -1,0 +1,55 @@
+html {
+  position: relative;
+  min-height: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  color: $color-text;
+  background-color: $color-body;
+  font-size: $base-font-size;
+  font-family: $font-primary;
+  outline: none;
+  word-wrap: break-word;
+  font-weight: $fw-400;
+}
+
+*, *:before, *:after {
+  outline: none;
+  box-sizing: inherit;
+}
+
+.container {
+  width: 100%;
+  max-width: ($cont-width + $cont-padding);
+  padding-left: ($cont-padding / 2);
+  padding-right: ($cont-padding / 2);
+  margin-left: auto;
+  margin-right: auto;
+
+  &.sm {
+    max-width: ($cont-width-sm + $cont-padding);
+  }
+
+  &.md {
+    max-width: ($cont-width-md + $cont-padding);
+  }
+
+  &.fluid {
+    max-width: 100%;
+    padding-left: ($fluid-cont-padding / 2);
+    padding-right: ($fluid-cont-padding / 2);
+  }
+}
+
+.main-content {
+  padding: 84px 0 40px 26px;
+}
+
+a {
+  transition: $trsn-dur;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}

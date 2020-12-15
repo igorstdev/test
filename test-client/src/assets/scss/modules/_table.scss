@@ -1,0 +1,79 @@
+/* Table styles */
+
+// Table global styles
+
+table {
+	width: 100%;
+}
+
+// Table styles based on existing types
+
+.table-main {
+	overflow-x: auto;
+
+	table {
+		text-align: left;
+		min-width: 830px;
+
+		th, td {
+			padding: 20px;
+		}
+
+		tr {
+			border-bottom: 1px solid $color-border;
+		}
+
+		a {
+			text-decoration: underline;
+		}
+
+		.btn-icon {
+
+			&.sort {
+
+				&::after {
+					content: ($icon-sort-up);
+					font-family: $icomoon-font-family;
+					font-size: $fs-md;
+				}
+
+				&.change-icon {
+
+					&::after {
+						content: ($icon-sort-down);
+					}
+				}
+			}
+		}
+
+		.actions {
+
+			li {
+				display: flex;
+
+				a {
+					padding: 0 5px;
+				}
+			}
+
+			.delete {
+
+				i {
+					color: $color-warning;
+					font-size: 20px;
+				}
+			}
+		}
+	}
+
+	&.white {
+		background-color: #ffffff;
+	}
+
+	&.fixed-layout {
+
+		table {
+			table-layout: fixed;
+		}
+	}
+}

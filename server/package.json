@@ -1,0 +1,26 @@
+{
+  "name": "node-task",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "nodemon src/server.js localhost 8081",
+    "createdb": "node src/db/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "fastest-validator": "^1.9.0",
+    "pg": "^8.5.1",
+    "pgtools": "^0.3.0",
+    "prettier": "^2.2.1",
+    "query-string": "^6.13.7"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  },
+  "proxy": "http://localhost:3000"
+}

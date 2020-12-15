@@ -1,0 +1,38 @@
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 20px;
+
+  li {
+    &:not(:last-child) {
+      margin-right: 10px;
+      position: relative;
+
+      a {
+        padding-right: 30px;
+      }
+
+      &:after {
+        content: "\e912";
+        font-family: $icomoon-font-family;
+        position: absolute;
+        font-size: $fs-xl;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 222;
+
+      }
+    }
+    &:last-child {
+      a {
+        opacity: .6;
+        pointer-events: none;
+      }
+    }
+
+    a {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "development": {
+    "password": "root",
+    "database": "awesome",
+    "host": "localhost"
+  }
+}

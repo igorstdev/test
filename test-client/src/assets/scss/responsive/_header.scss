@@ -1,0 +1,54 @@
+@media (max-width: $screen-sm-max) {
+
+	header {
+		left: 0;
+		height: 60px;
+
+		.container {
+			
+			&.fluid {
+				display: flex;
+				padding-left: 9px;
+				padding-right: 15px;
+			}
+		}
+
+		.sidebar-btn {
+	        display: inline-block;
+	    }
+
+	    .text-field.transparent {
+
+	    	input {
+	    		padding-right: 35px !important;
+	    		padding-left: 10px;
+	    	}
+	    }
+
+	    .notify {
+			margin: 0 15px;
+	    }
+
+	    .info-section {
+
+	    	.user-image {
+
+	    		img {
+	    			width: 35px;
+	    			min-width: 35px;
+	    			height: 35px;
+	    		}
+	    	}
+
+	    	.actions {
+	    		top: 47px;
+	    		right: -10px;
+
+	    		&:before {
+	    			right: 17px;
+	    		}
+	    	}
+	    }
+	}
+	
+}

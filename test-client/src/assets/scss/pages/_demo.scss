@@ -1,0 +1,48 @@
+/* Demo page styles */
+
+.demo {
+
+	.demo-subtitle {
+		color: $color-primary;
+		font-weight: $fw-300;
+		margin: 50px 0;
+	}
+
+	.list {
+		max-width: 350px;
+
+		li {
+			padding: 10px 0;
+		}
+	}
+
+	.demo-table {
+		max-width: 1200px;
+
+		&.fixed {
+
+			th {
+
+				&:nth-child(1) {
+					width: 30%;
+				}
+
+				&:nth-child(2) {
+					width: 25%;
+				}
+
+				&:nth-child(3) {
+					width: 20%;
+				}
+
+				&:nth-child(4) {
+					width: 15%;
+				}
+
+				&:nth-child(5) {
+					width: 10%;
+				}
+			}
+		}
+	}
+}
